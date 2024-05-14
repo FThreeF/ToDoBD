@@ -1,0 +1,13 @@
+.registration {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 260px;
+	padding: 10px;
+    
+}
+
+.title {
+	font-size: 32px;
+	text-align: center;
+}
