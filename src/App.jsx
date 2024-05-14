@@ -9,11 +9,11 @@ const App = () => {
 	const router = createBrowserRouter(
 		[
 			{
-				path: '/',
+				path: '/menu',
 				element: <Main host={host} />,
 			},
 			{
-				path: '/registration',
+				path: '/',
 				element: <Registration host={host} setHost={setHost} />,
 			},
 		],

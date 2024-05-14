@@ -23,7 +23,7 @@ const Registration = ({ host, setHost }) => {
 		// 	setMessage(response.message);
 		// }
 		if (user.login == 'admin' && user.password == 'admin') {
-			navigate('/');
+			navigate('/menu');
 			setHost(user.login);
 		}
 	};
