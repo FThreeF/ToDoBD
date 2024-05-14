@@ -17,7 +17,7 @@ const App = () => {
 				element: <Registration host={host} setHost={setHost} />,
 			},
 		],
-		{ basename: import.meta.env.BASE_URL }
+		{ basename: '/ToDoBD' }
 	);
 
 	return <RouterProvider router={router} />;
