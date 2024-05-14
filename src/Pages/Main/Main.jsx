@@ -3,6 +3,7 @@ import TaskList from '../../components/TaskList/TaskList';
 import s from './Main.module.css';
 import axios from 'axios';
 import Menu from '../../components/Menu/Menu';
+import { Link } from 'react-router-dom';
 
 const baseUrl = 'http://localhost:3000';
 
@@ -48,7 +49,7 @@ const Main = ({ host }) => {
 					<TaskList host={host} deleteTask={deleteTask} tasks={filteredTasks} />{' '}
 				</>
 			) : (
-				<a href='/registration'>Войдите</a>
+				<Link to='/registration'>Войдите</Link>
 			)}
 		</div>
 	);
