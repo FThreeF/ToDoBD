@@ -8,8 +8,14 @@ const baseUrl = 'http://localhost:3000';
 
 const TaskAdd = ({ addTask, setAddTask, create }) => {
 	const [task, setTask] = useState({ name: '', description: '', date: '', responsible: 1, status: 1 });
-	const [users, setUsers] = useState([{id: 1, login: 'roman'},{id: 2, login: 'admin'} ]);
-	const [statuses, setStatuses] = useState([{id: 1, name: 'выполнено'},{id: 2, name: 'в процессе'}]);
+	const [users, setUsers] = useState([
+		{ id: 1, login: 'roman' },
+		{ id: 2, login: 'admin' },
+	]);
+	const [statuses, setStatuses] = useState([
+		{ id: 1, name: 'выполнено' },
+		{ id: 2, name: 'в процессе' },
+	]);
 
 	const [selected, setSelected] = useState([{ responsible: '', statuses: '' }]);
 
@@ -30,7 +36,13 @@ const TaskAdd = ({ addTask, setAddTask, create }) => {
 	// }, []);
 
 	const createTask = async () => {
-		create({ ...task, responsible: (task.responsible == 1) ? 'Roman' : "Admin",  status: (task.status == 1) ? 'Выполнено' : "В процессе", date: new Date().toISOString().split('T')[0], id: new Date().toISOString().split('T')[0]})
+		create({
+			...task,
+			responsible: task.responsible == 1 ? 'Roman' : 'Admin',
+			status: task.status == 1 ? 'Выполнено' : 'В процессе',
+			date: new Date().toISOString().split('T')[0],
+			id: new Date(),
+		});
 		// await axios.put(`${baseUrl}/createTask`, { ...task, date: new Date().toISOString().split('T')[0] });
 		setAddTask(false);
 	};
