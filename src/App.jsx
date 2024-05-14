@@ -16,9 +16,9 @@ const App = () => {
 			element: <Registration host={host} setHost={setHost} />,
 		},
 		
-	], baseName=process.env.PUBLIC_URL);
+	], baseName='/ToDoBD');
 
-	return <RouterProvider router={router} />;
+	return <RouterProvider baseName='/ToDoBD' router={router} />;
 };
 
 export default App;
