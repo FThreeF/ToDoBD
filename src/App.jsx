@@ -15,7 +15,8 @@ const App = () => {
 			path: '/registration',
 			element: <Registration host={host} setHost={setHost} />,
 		},
-	]);
+		
+	], baseName='https://fthreef.github.io/ToDoBD/');
 
 	return <RouterProvider router={router} />;
 };
