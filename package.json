@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://fthreef.github.io/ToDoBD/",
+  "homepage": "https://fthreef.github.io/ToDoBD/registration",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
