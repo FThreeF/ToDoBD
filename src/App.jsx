@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Registration from './Pages/Registration/Registration';
 import './style.css';
 import Main from './Pages/Main/Main';
@@ -15,10 +15,13 @@ const App = () => {
 			path: '/registration',
 			element: <Registration host={host} setHost={setHost} />,
 		},
-		
-	], baseName='/ToDoBD');
+	]);
 
-	return <RouterProvider baseName='/ToDoBD' router={router} />;
+	return (
+		<BrowserRouter basename='/ToDoBD' >
+			<RouterProvider router={router} />;
+		</BrowserRouter>
+	);
 };
 
 export default App;
